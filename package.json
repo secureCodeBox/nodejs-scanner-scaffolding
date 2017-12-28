@@ -1,5 +1,5 @@
 {
-    "name": "securecodebox-worker",
+    "name": "@securecodebox/securecodebox-worker",
     "version": "0.0.1",
     "author": "iteratec GmbH",
     "description": "A wrapper to easily integrate new scanner into the secureCodeBox",
