@@ -1,12 +1,12 @@
 {
     "name": "@securecodebox/securecodebox-worker",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": "iteratec GmbH",
     "description": "A wrapper to easily integrate new scanner into the secureCodeBox",
     "license": "Apache-2.0",
     "main": "index.js",
     "dependencies": {
-        "camunda-worker-node": "^0.3.1",
+        "@securecodebox/camunda-worker-node": "^0.3.2",
         "express": "^4.16.2",
         "lodash": "^4.17.4",
         "uuid": "^3.1.0"
