@@ -1,10 +1,17 @@
 {
-    "name": "@securecodebox/securecodebox-worker",
-    "version": "0.0.5",
+    "name": "@securecodebox/scanner-scaffolding",
+    "version": "0.0.6",
     "author": "iteratec GmbH",
-    "description": "A wrapper to easily integrate new scanner into the secureCodeBox",
+    "description": "NPM libary to easily set up new scanners for the SecureCodeBox",
     "license": "Apache-2.0",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/secureCodeBox/nodejs-scanner-scaffolding.git"
+    },
+    "scripts": {
+        "test": "jest --silent"
+    },
     "dependencies": {
         "camunda-worker-node": "^6.0.0",
         "express": "^4.16.3",
