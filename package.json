@@ -9,6 +9,9 @@
         "type": "git",
         "url": "git+https://github.com/secureCodeBox/nodejs-scanner-scaffolding.git"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "test": "jest --silent"
     },
