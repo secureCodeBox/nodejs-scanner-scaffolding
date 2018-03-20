@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
+deploy:
+  provider: npm
+  email: jannik@hollenbach.de
+  api_key:
+    secure: KIAXgUxu5G/OFuCrJkvAg6lFDIGjhECiUhRei42n2cEXrkDUmDTPoAZrfMTvBORocsjLbjoAD12i4u0cbE5d4LLlvJCw2r0dKYBlh72LZFVGXx95+b6ufOY4b9OPgz4sn1XR9DG9GQ4oS7VMEvPtdJWUqePKmQR2q1DCmxrvhN08zxK5FFlu7XG5MbHSV2m5g5EDsWe7cf5bteZrn/8L4UiSVsS8vvXRkYh625TwBDt2kemvgMaP0Hn6BgJK9elHEpRknBykhEd6ZUugmN+E2Y+jzkdvX0Mrz2zdfQXkE9spLlcrlA6xbDv0+hNAljVmLIFvAPmabXl9BB348a5k1u7cbM6Nb3UTkGpJiIhRjrW3XEUlRdWPrGkhn/6cJW/Kus+dU5ii3ApmBOLJNY9f60wHepgIgGtLFwL7gWvwg+uzoxlecc8g7KfW7STi7r8btoW3yEJd5NFFco7sAp5AyPyiOPEXF8lyV6oWxoSgtUh+B+9nnCaq7B7ZjqT9pKUrAAxalEXqpjx7NfNbDVXGnIIoK8K6AjpC5pQ2qUZZuCbz7wn3OD958tmK1G2Jr1L35cxq1qJhBEg67QvJZ2Ep77zHtrA2IXsEtVIXbi2Yav/sbP2rlYzWYrKGr3VSsW3AZAHSiprEaPMPmXitTMqRtrZssuDTcc65y2iwKI4UMYs=
+  on:
+    tags: true
+    repo: secureCodeBox/nodejs-scanner-scaffolding
