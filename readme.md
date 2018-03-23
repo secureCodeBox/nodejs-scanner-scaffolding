@@ -1,4 +1,4 @@
-# SecureCodeBox Worker
+# SecureCodeBox Scanner Scaffolding
 
 A wrapper to easily integrate new scanner into the secureCodeBox.
 
