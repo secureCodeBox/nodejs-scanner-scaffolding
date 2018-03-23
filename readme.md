@@ -4,9 +4,9 @@ A wrapper to easily integrate new scanner into the secureCodeBox.
 
 This bundles a few basic concernes every worker service should fullfill:
 
-* Fetching and completing Tasks
-* Healthcheck endpoints
-* Error handeling
+*   Fetching and completing Tasks
+*   Healthcheck endpoints
+*   Error handeling
 
 ## Requirements
 
@@ -14,22 +14,22 @@ This libary is compatible with Node 8 and beyond.
 
 ## Instalation
 
-`npm install @securecodebox/securecodebox-worker`
+`npm install @securecodebox/scanner-scaffolding`
 
 ## Example
 
 This example shows how this libary can be used:
 
 ```js
-const SecureCodeBoxWorker = require('@securecodebox/securecodebox-worker');
+const SecureCodeBoxScannerScaffolding = require('@securecodebox/scanner-scaffolding');
 
-const secureCodeBoxWorker = new SecureCodeBoxWorker({
-    engineAddress: 'http://secureboxengine/engine-rest',
+const secureCodeBoxScannerScaffolding = new SecureCodeBoxScannerScaffolding({
+    engineAddress: 'http://secureboxengine/rest',
     // Used to generate the worker id. This Example would look something like this: securebox.portscan.60a6ac0c-4e26-40ea-908e-598e9c807887
     workername: 'portscan',
 });
 
-secureCodeBoxWorker.registerScanner(
+secureCodeBoxScannerScaffolding.registerScanner(
     // Name of the External Task specified in the Engine
     'portscan',
     // Array of Process Variables which should be fetched
@@ -50,7 +50,7 @@ secureCodeBoxWorker.registerScanner(
  *       "/" basic endpoint for healthchecks returns the worker id as a string
  * "/status" returns a json object containing basic information about this worker
  */
-secureCodeBoxWorker.startStatusServer();
+secureCodeBoxScannerScaffolding.startStatusServer();
 ```
 
 ## Handeling Errors
@@ -58,7 +58,7 @@ secureCodeBoxWorker.startStatusServer();
 In case of a scan failure you can throw Errors from the registerScanner Callback function. The Error message will be submitted back to the engine.
 
 ```js
-secureCodeBoxWorker.registerScanner(
+secureCodeBoxScannerScaffolding.registerScanner(
     'nmap_portscan',
     ['nmap_target', 'nmap_parameter'],
     async ({ nmap_target, nmap_parameter }) => {
