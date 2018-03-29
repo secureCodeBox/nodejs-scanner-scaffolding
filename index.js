@@ -1,1 +1,1 @@
-module.exports = require('./lib/SecureCodeBoxWorker');
+module.exports = require('./lib/ScannerScaffolding');
