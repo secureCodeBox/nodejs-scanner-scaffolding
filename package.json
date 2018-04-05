@@ -17,7 +17,7 @@
         "test": "jest --silent"
     },
     "dependencies": {
-        "camunda-worker-node": "^6.0.0",
+        "@securecodebox/camunda-worker-node": "^7.0.0",
         "express": "^4.16.3",
         "lodash": "^4.17.5",
         "uuid": "^3.2.1"
