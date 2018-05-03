@@ -4,12 +4,3 @@ node_js:
 before_install:
   - npm install -g npm
   - npm --version
-# deploy:
-#   provider: npm
-#   email: jannik@hollenbach.de
-#   skip_cleanup: true
-#   api_key:
-#     secure: cg36X81yvWVRMrhwwYUr9zJDTRrxwGbcN4r14FRF27tAkbDkoyQLQ5muEqEuFNYe/izdZ7lS+nwPSK16OF6VJkSbK5YcdIl99TQJSE8PWMLPcrEMRZz0s5sga3ki56AcHV6xk/vqOCzBjLGwCbuclbG0gJs16R+8M8x+OmL17ahuWvrOsd3BkTgd69S3f+cuMY7l2kswN+6xpAQQjGP4Hq7z7QF6zrwD+JsbGyNPHbEbOiVs89DYe0CBQ/tukmdTlqypxQ4UORv6woIDbAIR8zZU44cLxHxKBxBZXerU9tqwwyXFwCaDwHh3j8EUWrrTvpwdH3hjY3qJJSe1PaQ0PCgZdh36lAg7oO4P73FT+4V8u2t4vqQS1G0A5Ob56gbQZzM3lSNRrFhzGcVjRxOhkZ5It8MdElMEEEASXHaz2Wkx3LAE9VsB0ciIc18mEK47GtfZC6LJNYgrun86EBStVriYb2K/iRIWDfEszsPf9RwwARlDFZllAKe1CFf9TA6zpWXV5/41AWc0IrmDiOxkgrZeruo8gfUSzZVahn69qh1vQX4A2/T7Tw6c9rvBCjdDCbTANKLTrDrCbcBPj84SqsKeZlnSUKDK3qxXtcRZOvXKdgnx2TEDL+HeWXgL8wnYN/nk42lpBGvkdb9YtJajdvbpyqnvrXdecntrDViD768=
-#   on:
-#     tags: true
-#     repo: secureCodeBox/nodejs-scanner-scaffolding
