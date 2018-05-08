@@ -23,51 +23,32 @@ This example shows how this libary can be used:
 ```js
 const SecureCodeBoxScannerScaffolding = require('@securecodebox/scanner-scaffolding');
 
-const secureCodeBoxScannerScaffolding = new SecureCodeBoxScannerScaffolding({
-    engineAddress: 'http://secureboxengine/rest',
-    // Used to generate the worker id. This Example would look something like this: securebox.portscan.60a6ac0c-4e26-40ea-908e-598e9c807887
-    workername: 'portscan',
-});
-
-secureCodeBoxScannerScaffolding.registerScanner(
-    // Name of the External Task specified in the Engine
-    'portscan',
-    // Array of Process Variables which should be fetched
-    ['target'],
+const worker = new SecureCodeBoxScannerScaffolding(
     // Callback function which will be called when a new scan should be performed
-    async ({ target }) => {
-        const findings = await performScan(target);
-
-        return {
-            findings, // Attributes of this Object will be saved as process variables
-        };
+    async targets => {
+        return { raw: [], result: [] };
+    },
+    {
+        engineAddress: 'http://localhost:8080',
+        // Name of the External Task specified in the Engine
+        topic: 'nmap_portscan',
+        // Used to generate the worker id. This Example would look something like this: securebox.portscan.60a6ac0c-4e26-40ea-908e-598e9c807887
+        workername: 'portscan',
+        // Used in the status page and logged on startup to check if the connection to the scanner is successful
+        async testScannerFunctionality() {
+            return { version: '1.5.3', testRun: 'successful' };
+        },
     }
 );
-
 /**
  * Starts a small server with two endpoints:
  *
  *       "/" basic endpoint for healthchecks returns the worker id as a string
  * "/status" returns a json object containing basic information about this worker
  */
-secureCodeBoxScannerScaffolding.startStatusServer();
+worker.startStatusServer();
 ```
 
 ## Handeling Errors
 
-In case of a scan failure you can throw Errors from the registerScanner Callback function. The Error message will be submitted back to the engine.
-
-```js
-secureCodeBoxScannerScaffolding.registerScanner(
-    'nmap_portscan',
-    ['nmap_target', 'nmap_parameter'],
-    async ({ nmap_target, nmap_parameter }) => {
-        // Thrown Errors will be submitted as incidents to theprocess engine.
-        throw new Error('Something went wrong...');
-    }
-);
-```
-
-## Special Thanks
-
-Most of this functionality of thos package comes from the awesome `camunda-worker-node` package.
+In case of a scan failure you can throw Errors from the Callback function. The Error message will be submitted back to the engine.

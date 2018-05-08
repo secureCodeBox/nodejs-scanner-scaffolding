@@ -10,7 +10,7 @@ const worker = new Worker(
         topic: 'nmap_portscan',
         workername: 'test',
         async testScannerFunctionality() {
-            return { foo: 'bar' };
+            return { version: '1.5.3', testRun: 'successful' };
         },
     }
 );
