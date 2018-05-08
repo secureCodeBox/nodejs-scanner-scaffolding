@@ -35,6 +35,7 @@ const worker = new SecureCodeBoxScannerScaffolding(
         // Used to generate the worker id. This Example would look something like this: securebox.portscan.60a6ac0c-4e26-40ea-908e-598e9c807887
         workername: 'portscan',
         // Used in the status page and logged on startup to check if the connection to the scanner is successful
+        // Needs to return a object with to attribtues version and testRun
         async testScannerFunctionality() {
             return { version: '1.5.3', testRun: 'successful' };
         },
