@@ -1,6 +1,6 @@
 {
     "name": "@securecodebox/scanner-scaffolding",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "author": "iteratec GmbH",
     "description": "NPM libary to easily set up new scanners for the SecureCodeBox",
     "license": "Apache-2.0",
