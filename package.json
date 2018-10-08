@@ -23,6 +23,7 @@
         "uuid": "^3.3.2"
     },
     "devDependencies": {
+        "body-parser": "^1.18.3",
         "eslint": "^5.6.0",
         "jest": "^23.6.0",
         "supertest": "^3.3.0"
