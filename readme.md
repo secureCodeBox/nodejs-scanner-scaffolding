@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/secureCodeBox/nodejs-scanner-scaffolding.svg?token=zU9n22nM6GwATasbxQBK&branch=master)](https://travis-ci.com/secureCodeBox/nodejs-scanner-scaffolding)
+[![Build Status](https://travis-ci.com/secureCodeBox/nodejs-scanner-scaffolding.svg?branch=develop)](https://travis-ci.com/secureCodeBox/nodejs-scanner-scaffolding)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Known Vulnerabilities](https://snyk.io/test/github/secureCodeBox/nodejs-scanner-scaffolding/badge.svg)](https://snyk.io/test/github/secureCodeBox/nodejs-scanner-scaffolding)
 
