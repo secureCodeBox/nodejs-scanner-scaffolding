@@ -16,7 +16,7 @@ This bundles a few basic concernes every worker service should fullfill:
 
 This libary is compatible with Node 8 and beyond.
 
-## Instalation
+## Installation
 
 `npm install @securecodebox/scanner-scaffolding`
 
