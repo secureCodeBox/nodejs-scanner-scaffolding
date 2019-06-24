@@ -13,7 +13,6 @@
         "access": "public"
     },
     "scripts": {
-        "pretest": "eslint .",
         "test": "jest --testEnvironment node --silent"
     },
     "dependencies": {
