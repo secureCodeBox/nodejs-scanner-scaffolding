@@ -1,31 +1,35 @@
 {
-    "name": "@securecodebox/scanner-scaffolding",
-    "version": "2.2.5-0",
-    "author": "iteratec GmbH",
-    "description": "NPM libary to easily set up new scanners for the SecureCodeBox",
-    "license": "Apache-2.0",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/secureCodeBox/nodejs-scanner-scaffolding.git"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "scripts": {
-        "test": "jest --testEnvironment node --silent"
-    },
-    "dependencies": {
-        "axios": "^0.18.1",
-        "express": "^4.16.3",
-        "lodash": "^4.17.11",
-        "uuid": "^3.3.2"
-    },
-    "devDependencies": {
-        "basic-auth": "^2.0.1",
-        "body-parser": "^1.18.3",
-        "eslint": "^5.16.0",
-        "jest": "^24.8.0",
-        "supertest": "^4.0.2"
-    }
+  "name": "@securecodebox/scanner-scaffolding",
+  "version": "2.2.5-0",
+  "author": "iteratec GmbH",
+  "description": "NPM libary to easily set up new scanners for the SecureCodeBox",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/secureCodeBox/nodejs-scanner-scaffolding.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest --testEnvironment node --silent",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "express": "^4.16.3",
+    "lodash": "^4.17.11",
+    "uuid": "^3.3.2",
+    "snyk": "^1.192.0"
+  },
+  "devDependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2"
+  },
+  "snyk": true
 }
